@@ -1,0 +1,294 @@
+/* Mobile-Specific Optimizations */
+
+/* Base mobile styles */
+@media only screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    /* Optimize bulbs for mobile */
+    .bulb {
+        width: 30px;
+        height: 30px;
+        background-size: 30px 30px;
+    }
+
+    .bulb-holder {
+        height: 50px;
+    }
+
+    /* Make banner responsive */
+    .bannar {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Optimize balloons for mobile */
+    .balloons {
+        width: 60px;
+        height: 110px;
+        background-size: 60px 110px;
+    }
+
+    .balloons h2 {
+        font-size: 28px;
+        text-shadow: 2px 2px 2px #FFF;
+    }
+
+    /* Proper alignment for balloon elements on mobile - Two line layout */
+    /* First line: b11, b22, b33 */
+    #b11 {
+        top: 180px !important;
+        left: 10% !important;
+    }
+
+    #b22 {
+        top: 180px !important;
+        left: 45% !important;
+    }
+
+    #b33 {
+        top: 180px !important;
+        left: 80% !important;
+    }
+
+    /* Second line: b44, b55, b66, b77, b88 */
+    #b44 {
+        top: 310px !important;
+        left: 5% !important;
+    }
+
+    #b55 {
+        top: 310px !important;
+        left: 27% !important;
+    }
+
+    #b66 {
+        top: 310px !important;
+        left: 49% !important;
+    }
+
+    #b77 {
+        top: 310px !important;
+        left: 71% !important;
+    }
+
+    #b88 {
+        top: 310px !important;
+        left: 93% !important;
+    }
+
+    /* Mobile-friendly cake */
+    .cake {
+        transform: scale(0.7);
+        margin: 0 auto;
+    }
+
+    .cake-cover {
+        margin-top: 100px;
+    }
+
+    /* Optimize messages for mobile */
+    .message {
+        margin-top: 200px;
+        padding: 0 15px;
+    }
+
+    .message p {
+        font-size: 22px;
+        text-shadow: 0 0 8px rgba(255, 215, 0, 0.8), 
+                     1px 1px 3px rgba(0, 0, 0, 0.8),
+                     0 0 15px rgba(255, 215, 0, 0.5);
+        line-height: 1.5;
+        margin-bottom: 15px;
+        letter-spacing: 0.3px;
+    }
+
+    /* Mobile-friendly control buttons */
+    .navbar-fixed-bottom {
+        background: rgba(0, 0, 0, 0.8);
+        padding: 10px 0;
+    }
+
+    .navbar-fixed-bottom .row {
+        margin: 0;
+    }
+
+    .navbar-fixed-bottom .col-md-6 {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .btn-primary {
+        width: 100%;
+        margin: 5px 0;
+        padding: 12px;
+        font-size: 14px;
+        border-radius: 8px;
+        touch-action: manipulation;
+        -webkit-appearance: none;
+        appearance: none;
+    }
+
+    /* Larger touch targets */
+    .btn-primary:active {
+        transform: scale(0.95);
+    }
+
+    /* Audio control for mobile */
+    audio {
+        display: none;
+    }
+
+    /* Balloon border adjustment */
+    .balloon-border {
+        display: none; /* Hide on mobile for better performance */
+    }
+
+    /* Container adjustments */
+    .container {
+        width: 100%;
+        padding: 0;
+    }
+
+    /* Loading screen */
+    .loading {
+        width: 60px;
+        height: 60px;
+    }
+}
+
+/* Extra small devices (phones in portrait) */
+@media only screen and (max-width: 480px) {
+    .bulb {
+        width: 25px;
+        height: 25px;
+        background-size: 25px 25px;
+    }
+
+    .bulb-holder {
+        height: 40px;
+    }
+
+    .balloons {
+        width: 50px;
+        height: 92px;
+        background-size: 50px 92px;
+    }
+
+    .balloons h2 {
+        font-size: 22px;
+    }
+
+    /* Adjust balloon spacing for small screens - Two line layout */
+    /* First line: b11, b22, b33 */
+    #b11 {
+        top: 160px !important;
+        left: 8% !important;
+    }
+
+    #b22 {
+        top: 160px !important;
+        left: 42% !important;
+    }
+
+    #b33 {
+        top: 160px !important;
+        left: 76% !important;
+    }
+
+    /* Second line: b44, b55, b66, b77, b88 */
+    #b44 {
+        top: 270px !important;
+        left: 2% !important;
+    }
+
+    #b55 {
+        top: 270px !important;
+        left: 24% !important;
+    }
+
+    #b66 {
+        top: 270px !important;
+        left: 46% !important;
+    }
+
+    #b77 {
+        top: 270px !important;
+        left: 68% !important;
+    }
+
+    #b88 {
+        top: 270px !important;
+        left: 90% !important;
+    }
+
+    .cake {
+        transform: scale(0.5);
+    }
+
+    .message p {
+        font-size: 18px;
+        text-shadow: 0 0 6px rgba(255, 215, 0, 0.8), 
+                     1px 1px 2px rgba(0, 0, 0, 0.8),
+                     0 0 12px rgba(255, 215, 0, 0.5);
+        margin-bottom: 12px;
+        letter-spacing: 0.2px;
+    }
+
+    .btn-primary {
+        font-size: 13px;
+        padding: 10px;
+    }
+}
+
+/* Landscape mode optimization */
+@media only screen and (max-height: 500px) and (orientation: landscape) {
+    .cake {
+        transform: scale(0.5);
+    }
+
+    .cake-cover {
+        margin-top: 10px;
+    }
+
+    .message {
+        margin-top: 50px;
+    }
+
+    .message p {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+}
+
+/* Touch-friendly improvements */
+@media (hover: none) and (pointer: coarse) {
+    /* This targets touch devices */
+    .btn-primary {
+        min-height: 44px; /* iOS recommended touch target */
+        margin: 8px 0;
+    }
+
+    /* Prevent zoom on input/button focus */
+    button, input, select, textarea {
+        font-size: 16px !important;
+    }
+}
+
+/* Reduce animations on low-power devices */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* Dark mode support for mobile */
+@media (prefers-color-scheme: dark) {
+    .message p {
+        text-shadow: 2px 2px 2px #000;
+    }
+}
